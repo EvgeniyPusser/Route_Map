@@ -1,0 +1,13 @@
+{
+  "name": "zip-route-finder",
+  "version": "1.0.0",
+  "description": "ZIP code route finder frontend",
+  "scripts": {
+    "dev": "npx live-server --port=8080 --open=map.html",
+    "start": "npx live-server --port=8080 --open=map.html",
+    "server": "cd ors-proxy && npm start"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

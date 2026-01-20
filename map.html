@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZIP Route Finder</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #map {
+      height: 500px;
+      width: 100%;
+      margin: 20px 0;
+      border: 2px solid #ccc;
+    }
+
+    .controls {
+      margin: 20px 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 120px;
+    }
+
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    #msg {
+      margin: 10px 0;
+      padding: 10px;
+      background: #f0f0f0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>ZIP Route Finder</h1>
+
+  <div class="controls">
+    <input type="text" id="from" placeholder="From ZIP" value="10001">
+    <input type="text" id="to" placeholder="To ZIP" value="90210">
+    <button onclick="findRoute()">Find Route</button>
+    <button onclick="exportRoads()">Export Roads</button>
+    <button onclick="clearMap()">Clear</button>
+  </div>
+
+  <div id="map"></div>
+  <div id="msg">Enter ZIP codes and click Find Route</div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="map.js"></script>
+</body>
+
+</html>
